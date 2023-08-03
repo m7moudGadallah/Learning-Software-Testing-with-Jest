@@ -37,4 +37,14 @@ describe('getItemById', () => {
         expect(getItemById(1)).toMatchObject({ id: 1 });
         expect(getItemById(1)).toHaveProperty('id', 1);
     });
+
+    // testing Errors
+    it('should throw an error that id is not defined', () => {
+        expect(() => getItemById()).toThrow();
+        expect(() => getItemById()).toThrowError('ID is not defined');
+    });
+
+    it('should throw error of Invalid ID! for id: -1', () => {
+        expect(() => getItemById(-1)).toThrowError('Invalid');
+    });
 });

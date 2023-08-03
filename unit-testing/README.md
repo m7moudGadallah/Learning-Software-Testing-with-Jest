@@ -2,19 +2,21 @@
 
 <!-- TOC -->
 
--   [Unit Testing](#unit-testing)
-    -   [Introduction](#introduction)
-        -   [Advantages](#advantages)
-        -   [Disadvantages](#disadvantages)
-    -   [Testing withJest](#testing-withjest)
-        -   [Numbers](#numbers)
-            -   [Matchers](#matchers)
-        -   [Strings](#strings)
-            -   [Matchers](#matchers)
-        -   [Arrays](#arrays)
-            -   [Matchers](#matchers)
-        -   [Objects](#objects)
-            -   [Matchers](#matchers)
+- [Unit Testing](#unit-testing)
+    - [Introduction](#introduction)
+        - [Advantages](#advantages)
+        - [Disadvantages](#disadvantages)
+    - [Testing withJest](#testing-withjest)
+        - [Numbers](#numbers)
+            - [Matchers](#matchers)
+        - [Strings](#strings)
+            - [Matchers](#matchers)
+        - [Arrays](#arrays)
+            - [Matchers](#matchers)
+        - [Objects](#objects)
+            - [Matchers](#matchers)
+        - [Errors](#errors)
+            - [Matchers](#matchers)
 
 <!-- /TOC -->
 
@@ -154,6 +156,55 @@ describe('getItemById', () => {
     it('should return {id: 1, price: 10} for id = 1', () => {
         expect(getItemById(1)).toMatchObject({ id: 1 });
         expect(getItemById(1)).toHaveProperty('id', 1);
+    });
+});
+```
+
+**_[&uarr;top](#content)_**
+
+### Errors
+
+#### Matchers
+
+-   toThrow
+-   toThrowError
+
+**_Example_**
+
+```js
+// index.js
+const getItemById = (id) => {
+    if (!id) {
+        throw new Error('ID is not defined, please provide id!');
+    }
+
+    if (id < 0 || id > 5) {
+        throw new Error('Invalid ID!');
+    }
+
+    return {
+        id: id,
+        price: 10,
+    };
+};
+```
+
+```js
+// index.test.js
+describe('getItemById', () => {
+    it('should return {id: 1, price: 10} for id = 1', () => {
+        expect(getItemById(1)).toMatchObject({ id: 1 });
+        expect(getItemById(1)).toHaveProperty('id', 1);
+    });
+
+    // testing Errors
+    it('should throw an error that id is not defined', () => {
+        expect(() => getItemById()).toThrow();
+        expect(() => getItemById()).toThrowError('ID is not defined');
+    });
+
+    it('should throw error of Invalid ID! for id: -1', () => {
+        expect(() => getItemById(-1)).toThrowError('Invalid');
     });
 });
 ```
