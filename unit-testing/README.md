@@ -46,3 +46,27 @@ describe('sum', () => {
 });
 ```
 
+### Strings
+
+#### Matchers
+
+-   toBe
+-   toMatch
+
+**_Example_**
+
+```js
+// index.js
+const greeting = (name) => `Hello, ${name}!`;
+```
+
+```js
+// index.test.js
+
+describe('greeting', () => {
+    it('should return Hello, mahmoud! for mahamoud', () => {
+        expect(greeting('mahmoud')).toBe('Hello, mahmoud!'); // it match exact value
+        expect(greeting('mahmoud')).toMatch('Hello, '); // relaxation in matching
+    });
+});
+```
