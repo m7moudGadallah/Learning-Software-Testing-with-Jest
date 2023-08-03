@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`craeteOrder should throw an error that user with id: 1 is not found: Not found a user with 1`] = `"Not found a user with this id: 1"`;
