@@ -2,26 +2,26 @@
 
 <!-- TOC -->
 
--   [Unit Testing](#unit-testing)
-    -   [Introduction](#introduction)
-        -   [Advantages](#advantages)
-        -   [Disadvantages](#disadvantages)
-    -   [Testing withJest](#testing-withjest)
-        -   [Numbers](#numbers)
-            -   [Matchers](#matchers)
-        -   [Strings](#strings)
-            -   [Matchers](#matchers)
-        -   [Arrays](#arrays)
-            -   [Matchers](#matchers)
-        -   [Objects](#objects)
-            -   [Matchers](#matchers)
-        -   [Errors](#errors)
-            -   [Matchers](#matchers)
-        -   [Async Code](#async-code)
-            -   [Matchers](#matchers)
-        -   [Mocking](#mocking)
-            -   [How to mock a function](#how-to-mock-a-function)
-            -   [Mocking module](#mocking-module)
+- [Unit Testing](#unit-testing)
+    - [Introduction](#introduction)
+        - [Advantages](#advantages)
+        - [Disadvantages](#disadvantages)
+    - [Testing withJest](#testing-withjest)
+        - [Numbers](#numbers)
+            - [Matchers](#matchers)
+        - [Strings](#strings)
+            - [Matchers](#matchers)
+        - [Arrays](#arrays)
+            - [Matchers](#matchers)
+        - [Objects](#objects)
+            - [Matchers](#matchers)
+        - [Errors](#errors)
+            - [Matchers](#matchers)
+        - [Async Code](#async-code)
+            - [Matchers](#matchers)
+        - [Mocking](#mocking)
+            - [How to mock a function](#how-to-mock-a-function)
+            - [Mocking module](#mocking-module)
 
 <!-- /TOC -->
 
@@ -38,7 +38,7 @@
 
 -   Don't give a lot of Confidence
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ## Testing withJest
 
@@ -75,7 +75,7 @@ describe('sum', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Strings
 
@@ -102,7 +102,7 @@ describe('greeting', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Arrays
 
@@ -133,7 +133,7 @@ describe('animals', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Objects
 
@@ -165,7 +165,7 @@ describe('getItemById', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Errors
 
@@ -214,7 +214,7 @@ describe('getItemById', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Async Code
 
@@ -247,7 +247,7 @@ describe('getItems', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 ### Mocking
 
@@ -308,7 +308,7 @@ so mock properity will be like that:
     }
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 #### Mocking module
 
@@ -497,6 +497,6 @@ describe('craeteOrder', () => {
 });
 ```
 
-**_[&uarr;top](#content)_**
+**_[&uarr;top](#unit-testing)_**
 
 > Note: You can find all the code examples mentioned in this README within the corresponding files provided in this repository. Feel free to clone this repository to your local machine and test them :)
