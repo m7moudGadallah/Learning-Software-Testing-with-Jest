@@ -9,7 +9,7 @@
 
 ## Disadvantages
 
--   Don't give alot of Confidence
+-   Don't give a lot of Confidence
 
 ## Testing withJest
 
@@ -67,6 +67,35 @@ describe('greeting', () => {
     it('should return Hello, mahmoud! for mahamoud', () => {
         expect(greeting('mahmoud')).toBe('Hello, mahmoud!'); // it match exact value
         expect(greeting('mahmoud')).toMatch('Hello, '); // relaxation in matching
+    });
+});
+```
+
+### Arrays
+
+#### Matchers
+
+-   toContain
+
+> Note: we can also use `not` with `toContains`
+
+**_Example_**
+
+```js
+// index.js
+const animals = ['cat', 'dog', 'cow'];
+```
+
+```js
+// index.test.js
+
+describe('animals', () => {
+    it('should return true for cat', () => {
+        expect(animals).toContain('cat');
+    });
+
+    it('should return false for hourse', () => {
+        expect(animals).not.toContain('hourse');
     });
 });
 ```

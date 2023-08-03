@@ -1,4 +1,4 @@
-const { sum, greeting } = require('./index');
+const { sum, greeting, animals } = require('./index');
 
 // testing Numbers
 describe('sum', () => {
@@ -15,7 +15,18 @@ describe('sum', () => {
 // testing Strings
 describe('greeting', () => {
     it('should return Hello, mahmoud! for mahamoud', () => {
-        expect(greeting('mahmoud')).toBe('Hello, mahmoud!');  // it match exact value
-        expect(greeting('mahmoud')).toMatch('Hello, ');  // relaxation in matching
+        expect(greeting('mahmoud')).toBe('Hello, mahmoud!'); // it match exact value
+        expect(greeting('mahmoud')).toMatch('Hello, '); // relaxation in matching
+    });
+});
+
+//testing arrays
+describe('animals', () => {
+    it('should return true for cat', () => {
+        expect(animals).toContain('cat');
+    });
+
+    it('should return false for hourse', () => {
+        expect(animals).not.toContain('hourse');
     });
 });
