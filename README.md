@@ -24,7 +24,7 @@ This repository is based on the [NodeJS Backend Testing Course](https://youtube.
 
 ## How to Use
 
-1. Clone: `git clone https://github.com/your-username/nodejs-backend-testing.git`
+1. Clone: `https://github.com/your-username/Learning-Software-Testing-with-Jest.git`
 2. Install: `npm install`
 3. Explore the course topics and respective folders
 4. Each topic folder contains code examples and notes
