@@ -1,4 +1,4 @@
-const { sum, greeting, animals } = require('./index');
+const { sum, greeting, animals, getItemById } = require('./index');
 
 // testing Numbers
 describe('sum', () => {
@@ -28,5 +28,13 @@ describe('animals', () => {
 
     it('should return false for hourse', () => {
         expect(animals).not.toContain('hourse');
+    });
+});
+
+// testing objects
+describe('getItemById', () => {
+    it('should return {id: 1, price: 10} for id = 1', () => {
+        expect(getItemById(1)).toMatchObject({ id: 1 });
+        expect(getItemById(1)).toHaveProperty('id', 1);
     });
 });

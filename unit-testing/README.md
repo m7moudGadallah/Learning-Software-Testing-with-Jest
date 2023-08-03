@@ -2,17 +2,19 @@
 
 <!-- TOC -->
 
-- [Unit Testing](#unit-testing)
-    - [Introduction](#introduction)
-        - [Advantages](#advantages)
-        - [Disadvantages](#disadvantages)
-    - [Testing withJest](#testing-withjest)
-        - [Numbers](#numbers)
-            - [Matchers](#matchers)
-        - [Strings](#strings)
-            - [Matchers](#matchers)
-        - [Arrays](#arrays)
-            - [Matchers](#matchers)
+-   [Unit Testing](#unit-testing)
+    -   [Introduction](#introduction)
+        -   [Advantages](#advantages)
+        -   [Disadvantages](#disadvantages)
+    -   [Testing withJest](#testing-withjest)
+        -   [Numbers](#numbers)
+            -   [Matchers](#matchers)
+        -   [Strings](#strings)
+            -   [Matchers](#matchers)
+        -   [Arrays](#arrays)
+            -   [Matchers](#matchers)
+        -   [Objects](#objects)
+            -   [Matchers](#matchers)
 
 <!-- /TOC -->
 
@@ -123,3 +125,37 @@ describe('animals', () => {
     });
 });
 ```
+
+**_[&uarr;top](#content)_**
+
+### Objects
+
+#### Matchers
+
+-   toMatchObject
+-   toHaveProperty
+
+**_Example_**
+
+```js
+// index.js
+const getItemById = (id) => {
+    return {
+        id: id,
+        price: 10,
+    };
+};
+```
+
+```js
+// index.test.js
+
+describe('getItemById', () => {
+    it('should return {id: 1, price: 10} for id = 1', () => {
+        expect(getItemById(1)).toMatchObject({ id: 1 });
+        expect(getItemById(1)).toHaveProperty('id', 1);
+    });
+});
+```
+
+**_[&uarr;top](#content)_**
