@@ -19,9 +19,18 @@ const getItemById = (id) => {
     };
 };
 
+const getItems = async () => {
+    return [
+        { id: 1, price: 20 },
+        { id: 2, price: 80 },
+        { id: 3, price: 30 },
+    ];
+};
+
 module.exports = {
     sum,
     greeting,
     animals,
     getItemById,
+    getItems,
 };

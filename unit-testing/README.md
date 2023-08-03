@@ -17,6 +17,8 @@
             - [Matchers](#matchers)
         - [Errors](#errors)
             - [Matchers](#matchers)
+        - [Async Code](#async-code)
+            - [Matchers](#matchers)
 
 <!-- /TOC -->
 
@@ -205,6 +207,39 @@ describe('getItemById', () => {
 
     it('should throw error of Invalid ID! for id: -1', () => {
         expect(() => getItemById(-1)).toThrowError('Invalid');
+    });
+});
+```
+
+**_[&uarr;top](#content)_**
+
+### Async Code
+
+#### Matchers
+
+-   resolves
+-   rejects
+
+**_Example_**
+
+```js
+// index.js
+const getItems = async () => {
+    return [
+        { id: 1, price: 20 },
+        { id: 2, price: 80 },
+        { id: 3, price: 30 },
+    ];
+};
+```
+
+```js
+// index.test.js
+describe('getItems', () => {
+    it('should return list of orders', async () => {
+        expect(await getItems()).toContainEqual({ id: 1, price: 20 });
+        //OR
+        await expect(getItems()).resolves.toContainEqual({ id: 2, price: 80 });
     });
 });
 ```

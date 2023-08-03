@@ -1,4 +1,4 @@
-const { sum, greeting, animals, getItemById } = require('./index');
+const { sum, greeting, animals, getItemById, getItems } = require('./index');
 
 // testing Numbers
 describe('sum', () => {
@@ -46,5 +46,14 @@ describe('getItemById', () => {
 
     it('should throw error of Invalid ID! for id: -1', () => {
         expect(() => getItemById(-1)).toThrowError('Invalid');
+    });
+});
+
+// testing async
+describe('getItems', () => {
+    it('should return list of orders', async () => {
+        expect(await getItems()).toContainEqual({ id: 1, price: 20 });
+        //OR
+        await expect(getItems()).resolves.toContainEqual({ id: 2, price: 80 });
     });
 });
