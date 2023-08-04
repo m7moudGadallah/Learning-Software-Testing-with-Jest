@@ -92,7 +92,6 @@ describe('craeteOrder', () => {
         email.sendEmail = createMock(email.sendEmail);
         db.createOrder = createMock(db.createOrder);
         db.getUser = createMock(db.getUser);
-        console.log(email.sendEmail.mock);
     });
 
     // restore mocks
