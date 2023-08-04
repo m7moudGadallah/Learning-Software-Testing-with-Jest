@@ -72,9 +72,9 @@ class CRUDController {
             const apiFeatures = new APIFeatures(req.query);
             const filterOptions = apiFeatures.parseFilterOptions();
             const sortOptions = apiFeatures.parseSortOptoins(sortByFields);
-            const selectOptions = apiFeatures.selectOptions(selectedFields);
+            const selectOptions = apiFeatures.parseSelectOptions(selectedFields);
 
-            const countDocs = await this.service.countDocs(filterOptions);
+            const countDocs = await this.service.count(filterOptions);
             const docs = await this.service.get({
                 filterOptions,
                 sortOptions,
@@ -126,7 +126,7 @@ class CRUDController {
         return catchAsync(async (req, res, next) => {
             const newDoc = await this.service.createOne(req.body);
 
-            sendSuccessResponse({ response: res }).JSON({
+            sendSuccessResponse({ response: res, statusCode: 201 }).JSON({
                 data: newDoc,
             });
         });

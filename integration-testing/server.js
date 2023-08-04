@@ -6,7 +6,7 @@ const app = require('./src/app');
 const { PORT = 5000, NODE_ENV: MODE } = process.env;
 
 // create server
-app.listen(PORT, async () => {
+const server = app.listen(PORT, async () => {
     console.log(
         `App is running in ${MODE} mode on port ${PORT}🚀...`.brightMagenta
             .underline.bold.italic
@@ -14,3 +14,5 @@ app.listen(PORT, async () => {
 
     await connectedDBPromise;
 });
+
+module.exports = server;

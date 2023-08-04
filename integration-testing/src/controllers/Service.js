@@ -17,7 +17,9 @@ class Service {
      * @returns {Promise<number>} The number of documents matching the filter options.
      */
     async count(options = { filterOptions: {} }) {
-        const numOfDocs = await this.model.countDocuments(options.filterOptions);
+        const numOfDocs = await this.model.countDocuments(
+            options.filterOptions
+        );
         return numOfDocs;
     }
 
@@ -71,7 +73,9 @@ class Service {
                 .select(selectOptions);
 
             // populate passed item
-            populates.forEach((item) => query.populate(item));
+            if (populates) {
+                populates.forEach((item) => query.populate(item));
+            }
 
             // execute query
             const docs = await query;
@@ -93,7 +97,9 @@ class Service {
         const query = this.model.findById(id);
 
         // populate passed item
-        options.populates.forEach((item) => query.populate(item));
+        if (options?.populates) {
+            options.populates.forEach((item) => query.populate(item));
+        }
 
         const doc = await query;
 

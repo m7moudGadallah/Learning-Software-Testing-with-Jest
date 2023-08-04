@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "export NODE_ENV=testing || SET \"NODE_ENV=testing\" && jest",
+    "test": "export NODE_ENV=testing || SET \"NODE_ENV=testing\" && jest -i --coverage",
     "start": "nodemon -L server.js"
   },
   "author": "Mahmoud Gadallah",
@@ -33,6 +33,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "supertest": "^6.3.3"
   }
 }
