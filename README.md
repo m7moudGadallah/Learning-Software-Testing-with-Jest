@@ -37,6 +37,7 @@ This repository is based on the [NodeJS Backend Testing Course](https://youtube.
 
 - ***[Unit Testing](./unit-testing/)***
 - ***[Integration Testing](./integration-testing/)***
+- ***[E2E Testing](./E2E-testing/)***
 
 ## Contributions
 
