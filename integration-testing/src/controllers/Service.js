@@ -17,7 +17,7 @@ class Service {
      * @returns {Promise<number>} The number of documents matching the filter options.
      */
     async count(options = { filterOptions: {} }) {
-        const numOfDocs = await this.model.countDocuments(filterOptions);
+        const numOfDocs = await this.model.countDocuments(options.filterOptions);
         return numOfDocs;
     }
 
@@ -134,8 +134,8 @@ class Service {
      * @returns {Promise<void>}
      */
     async deleteOne(id) {
-        const doc = await this.model.findById(req.params.id);
-        doc.remove();
+        const doc = await this.model.findById(id);
+        await doc.remove();
     }
 }
 

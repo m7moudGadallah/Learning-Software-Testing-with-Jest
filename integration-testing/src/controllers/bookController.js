@@ -1,7 +1,7 @@
 const { Book } = require('../models');
 const CRUDController = require('./CRUDController');
 
-const controller = new CRUDController(Book);
+const controller = new CRUDController(Book, { docName: `book` });
 /**
  * @route GET /api/v1/books
  * @desc Get all books from the database and send a success response with the books data.
