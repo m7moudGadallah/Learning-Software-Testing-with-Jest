@@ -8,6 +8,10 @@ const register = async (user = { email, password, confirmPassword }) => {
     if (password.trim().length < 8 || confirmPassword.trim().length < 8) {
         return 400;
     }
+
+    if (password.trim() !== confirmPassword.trim()) {
+        return 400;
+    }
 };
 
 module.exports = register;
