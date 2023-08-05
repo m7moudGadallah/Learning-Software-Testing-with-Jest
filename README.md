@@ -6,14 +6,14 @@
 
 <!-- TOC -->
 
-- [Learning Software Testing with Jest](#learning-software-testing-with-jest)
-    - [Content](#content)
-    - [Course Acknowledgment](#course-acknowledgment)
-    - [How to Use](#how-to-use)
-    - [Topics](#topics)
-    - [Contributions](#contributions)
-    - [License](#license)
-    - [Disclaimer](#disclaimer)
+-   [Learning Software Testing with Jest](#learning-software-testing-with-jest)
+    -   [Content](#content)
+    -   [Course Acknowledgment](#course-acknowledgment)
+    -   [How to Use](#how-to-use)
+    -   [Topics](#topics)
+    -   [Contributions](#contributions)
+    -   [License](#license)
+    -   [Disclaimer](#disclaimer)
 
 <!-- /TOC -->
 
@@ -35,9 +35,10 @@ This repository is based on the [NodeJS Backend Testing Course](https://youtube.
 
 ## Topics
 
-- ***[Unit Testing](./unit-testing/)***
-- ***[Integration Testing](./integration-testing/)***
-- ***[E2E Testing](./E2E-testing/)***
+-   **_[Unit Testing](./unit-testing/)_**
+-   **_[Integration Testing](./integration-testing/)_**
+-   **_[E2E Testing](./E2E-testing/)_**
+-   **_[TDD](./TDD/)_**
 
 ## Contributions
 
