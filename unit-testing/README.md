@@ -6,7 +6,7 @@
     - [Introduction](#introduction)
         - [Advantages](#advantages)
         - [Disadvantages](#disadvantages)
-    - [Testing withJest](#testing-withjest)
+    - [Testing with Jest](#testing-with-jest)
         - [Numbers](#numbers)
             - [Matchers](#matchers)
         - [Strings](#strings)
@@ -40,7 +40,7 @@
 
 **_[&uarr;top](#unit-testing)_**
 
-## Testing withJest
+## Testing with Jest
 
 ### Numbers
 
