@@ -1,0 +1,17 @@
+{
+  "name": "bdd",
+  "version": "1.0.0",
+  "description": "<!-- TOC -->",
+  "main": "./src/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.3.0"
+  }
+}
