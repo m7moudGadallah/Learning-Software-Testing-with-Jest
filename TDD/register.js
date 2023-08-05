@@ -12,6 +12,8 @@ const register = async (user = { email, password, confirmPassword }) => {
     if (password.trim() !== confirmPassword.trim()) {
         return 400;
     }
+    
+    return 200;
 };
 
 module.exports = register;
