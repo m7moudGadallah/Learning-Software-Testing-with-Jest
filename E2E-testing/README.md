@@ -1,6 +1,15 @@
 # End To End Testing
 
-# Introduction
+<!-- TOC -->
+
+-   [End To End Testing](#end-to-end-testing)
+    -   [Introduction](#introduction)
+        -   [Advantages](#advantages)
+        -   [Disadvantages](#disadvantages)
+
+<!-- /TOC -->
+
+## Introduction
 
 > It about Testing your app through its UI
 
