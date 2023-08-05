@@ -40,6 +40,7 @@ This repository is based on the [NodeJS Backend Testing Course](https://youtube.
 -   **_[E2E Testing](./E2E-testing/)_**
 -   **_[TDD](./TDD/)_**
 -   **_[BDD](./BDD/)_**
+-   **_[Performance Testing](./performance-testing/)_**
 
 ## Contributions
 
